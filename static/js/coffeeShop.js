@@ -52,3 +52,10 @@ addItemToCart('Tea');
 incrementCartTotal(3.00);
 });
 
+//Event Handler for clicking Place Order Button 
+const orderButton = $('#place-order');
+orderButton.on('click' , () => {
+let childrenNumber = $('#cart-items').children().length;
+incrementCoffeeSold(childrenNumber)
+
+});
