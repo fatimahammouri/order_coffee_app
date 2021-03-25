@@ -8,6 +8,8 @@ const addItemToCart = (itemName) => {
   `);
   
 };
+//this function we added to see how we can get value from the attribute
+//of a target element 
 const addToCartHandler = (evt)=>{
   const buttonElement = evt.target;
   addItemToCart(buttonElement.getAttribute('product')); 
@@ -43,5 +45,10 @@ const setProgressAndStatus = (progressVal, statusMsg) => {
 
 //
 // Add your event handlers below.
-//
+//Event handler for clicking  the button Add To Cart
+const button = $('.add-to-order');
+button.on('click', ()=>{
+addItemToCart('Tea');
+incrementCartTotal(3.00);
+});
 
